@@ -63,7 +63,8 @@ else:
             my_films.append(name)
         else:
             print(f'Ошибка: фильма {name} у нас нет :(')
-
-    print('Ваш список любимых фильмов:', end=' ')
-    for value in my_films:
-        print(f'{value},', end=' ')
+    if my_films:
+        print('Ваш список любимых фильмов:', end=' ')
+        print(', '.join(my_films))
+    else:
+        print('Ваш список пуст!')
